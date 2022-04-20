@@ -20,3 +20,7 @@ clone代码，第一次运行项目时，会在各个项目中生成空的build.
 该Demo中因为三个项目相互依赖，打包时会进入同一个apk,所以命名时要注意，不能有重复命名，否则出现奇奇怪怪的报错
 
 import prject ProjectMain 直接run就行
+
+[为什么不使用buildSrc](https://juejin.cn/post/6844904176250519565)
+
+[还有一个有意思的方式，以插件的方式直接根据配置写入，找时间看看](https://blog.csdn.net/qq_16692517/article/details/112991736)
