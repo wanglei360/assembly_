@@ -14,8 +14,8 @@ clone代码，第一次运行项目时，会在各个项目中生成空的build.
 
 三个项目都可独立运行，该Demo中打包使用的项目是ProjectMain，在该项目中的`app->build.gradle.kts`文件的`android->signingConfigs`中指定了签名文件，看客老爷自己生成吧！放在该项目的根目录即可，然后别忘了修改`android->signingConfigs`中的配置
 
-![MacDown logo](https://raw.githubusercontent.com/wanglei360/assembly_/master/ProjectMain/img/441650443097_.pic.jpg)
 按照图片找到这个选项，点击，就会生成apk了，会报一个关于`output-metadata.json`的错，不用管它
+![MacDown logo](https://raw.githubusercontent.com/wanglei360/assembly_/master/ProjectMain/img/441650443097_.pic.jpg)
 
 该Demo中因为三个项目相互依赖，打包时会进入同一个apk,所以命名时要注意，不能有重复命名，否则出现奇奇怪怪的报错
 
@@ -23,4 +23,4 @@ import prject ProjectMain 直接run就行
 
 [为什么不使用buildSrc](https://juejin.cn/post/6844904176250519565)
 
-[还有一个有意思的方式，以插件的方式直接根据配置写入，找时间看看](https://blog.csdn.net/qq_16692517/article/details/112991736)
+[还有一个有意思的方式，以插件的方式直接根据配置写入，找时间看看(在博客中的代码中)](https://blog.csdn.net/qq_16692517/article/details/112991736)
