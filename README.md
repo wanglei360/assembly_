@@ -23,4 +23,4 @@ import prject ProjectMain 直接run就行
 
 [为什么不使用buildSrc](https://juejin.cn/post/6844904176250519565)
 
-[还有一个有意思的方式，以插件的方式直接根据配置写入，找时间看看(在博客中的代码中)](https://blog.csdn.net/qq_16692517/article/details/112991736)
+[还有一个有意思的方式，以插件的方式直接根据配置写入，找时间看看(博客中最下方有代码地址)](https://blog.csdn.net/qq_16692517/article/details/112991736)
