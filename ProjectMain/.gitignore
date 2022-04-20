@@ -8,14 +8,15 @@
 */*.gradle
 */build
 */libs
+*.jks
 
 *.pro
 *.gradle
 *.bat
-*.properties
+local.properties
 
 /apk*
 gradlew
-/gradle
+#/gradle
 /build
 /captures

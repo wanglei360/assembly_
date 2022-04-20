@@ -3,7 +3,6 @@
     package="com.baselibrary">
 
     <application>
-        <activity android:name=".DemoActivity" />
         <activity android:name=".MLibActivity" />
     </application>
 
