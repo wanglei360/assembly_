@@ -19,5 +19,4 @@ clone代码，第一次运行项目时，会在各个项目中生成空的build.
 
 该Demo中因为三个项目相互依赖，打包时会进入同一个apk,所以命名时要注意，不能有重复命名，否则出现奇奇怪怪的报错
 
-
-
+import prject ProjectMain 直接run就行
