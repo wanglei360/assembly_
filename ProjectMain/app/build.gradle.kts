@@ -1,7 +1,7 @@
 plugins {
     id(Plugin.ANDROID_APPLICATION)
-    id(Plugin.KOTLIN_ANDROID)
 //    id("kotlin-parcelize")
+    id("config.plugin") version ("1.0.0")
 }
 
 android {
@@ -10,10 +10,10 @@ android {
 
     defaultConfig {
         applicationId = AppInfo.APPLICATION_ID
-        minSdk = AppInfo.MIN_SDK_VERSION
-        targetSdk = AppInfo.TARGET_SDK_VERSION
-        versionCode = AppInfo.APP_VERSION_NAME.replace(".", "").toInt()
-        versionName = AppInfo.APP_VERSION_NAME
+//        minSdk = AppInfo.MIN_SDK_VERSION
+//        targetSdk = AppInfo.TARGET_SDK_VERSION
+//        versionCode = AppInfo.APP_VERSION_NAME.replace(".", "").toInt()
+//        versionName = AppInfo.APP_VERSION_NAME
 //        multiDexEnabled = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -27,18 +27,16 @@ android {
     // 修改签名文件
     signingConfigs {
         create(AppInfo.RUN_ENVIRONMENT_RELEASE) {
-//        create("release") {
-            storeFile = file("../com.qifa.sellerNew.jks")
-            storePassword = "1x2x3x"
-            keyAlias = "qifa"
-            keyPassword = "1x2x3x"
+            storeFile = file("../jzsl.jks")
+            storePassword = "123456"
+            keyAlias = "jzsl"
+            keyPassword = "123456"
         }
         getByName(AppInfo.RUN_ENVIRONMENT_DEBUG) {
-//        getByName("debug") {
-            storeFile = file("../com.qifa.sellerNew.jks")
-            storePassword = "1x2x3x"
-            keyAlias = "qifa"
-            keyPassword = "1x2x3x"
+            storeFile = file("../jzsl.jks")
+            storePassword = "123456"
+            keyAlias = "jzsl"
+            keyPassword = "123456"
         }
     }
 
@@ -64,10 +62,6 @@ android {
         }
     }
 
-    compileOptions {
-        sourceCompatibility(JavaVersion.VERSION_1_8)
-        targetCompatibility(JavaVersion.VERSION_1_8)
-    }
     kotlinOptions {
         jvmTarget = "1.8"
     }

@@ -5,6 +5,20 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/tv3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_green_light"
+        android:gravity="center"
+        android:text="进入Library的Activity"
+        android:textSize="22sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
         android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="100dp"

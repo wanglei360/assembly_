@@ -1,23 +1,26 @@
 pluginManagement {
-    //TODO 在app的module中引入插件需添加这个代码块
-//    resolutionStrategy {
-//        eachPlugin {
-    //todo 如果是groupId
-//            if (requested.id.namespace == 'lugins') {
-//                // groupId:artifactId:version
-//                useModule("${requested.id.namespace}:${requested.id.name}:${requested.version}")
-//            }
-//        }
-//    }
+
     repositories {
         gradlePluginPortal()
         google()
         mavenCentral()
 //        maven("https://dl.bintray.com/kotlin/kotlin-eap")
+        maven("../ConfigPlugin")
+    }
+    //TODO 在app的module中引入插件需添加这个代码块
+    resolutionStrategy {
+        eachPlugin {
+            System.out.println("tttttttt   namespace = ${requested.id.namespace} ")
+            //todo 如果是groupId
+            if (requested.id.namespace == "config") {
+                // groupId:artifactId:version
+                useModule("${requested.id.namespace}:${requested.id.name}:${requested.version}")
+            }
+        }
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
@@ -27,8 +30,9 @@ rootProject.buildFileName = "../build.gradle.kts" // 指定脚本为build.gradle
 includeBuild("../configuration")
 rootProject.name = "ProjectMain" // 项目名称，自己取
 
-include("app")
-include("lib")
+include(":app")
+include(":lib")
+include(":ConfigPluginCode")
 
 mInclude("ProjectLibrary")
 mInclude("ProjectDemo")
